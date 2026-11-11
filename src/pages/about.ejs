@@ -1,0 +1,91 @@
+<%- include('../partials/head', { title: 'About us', description: 'Mission, values, history and leadership of ' + site.company.legalName }) %>
+<%- include('../partials/header') %>
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">About <%= site.company.name %></p>
+    <h1>Engineering trust since <%= site.company.founded %></h1>
+    <p>We started as a three-person studio in Jakarta. Today more than 1,200 people deliver and run digital services across nine countries.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <article class="card">
+      <h2>Our mission</h2>
+      <p><%= site.mission %></p>
+    </article>
+    <article class="card">
+      <h2>Our vision</h2>
+      <p><%= site.vision %></p>
+    </article>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">What guides us</p>
+      <h2>Our values</h2>
+    </div>
+    <div class="card-grid">
+      <% site.values.forEach(function (value) { %>
+      <article class="card">
+        <h3><%= value.name %></h3>
+        <p><%= value.text %></p>
+      </article>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <div class="section-head">
+      <p class="eyebrow">Our story</p>
+      <h2>Milestones</h2>
+      <p>Twenty-eight years of building, learning and growing with our clients.</p>
+    </div>
+    <ol class="timeline">
+      <% site.milestones.forEach(function (m) { %>
+      <li><strong><%= m.year %></strong><%= m.text %></li>
+      <% }) %>
+    </ol>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Leadership</p>
+      <h2>The team accountable for your outcomes</h2>
+    </div>
+    <div class="people">
+      <% site.leaders.forEach(function (person) { %>
+      <article class="person">
+        <span class="avatar" aria-hidden="true"><%= person.initials %></span>
+        <h3><%= person.name %></h3>
+        <p><%= person.role %></p>
+      </article>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Where we are</p>
+      <h2>Offices</h2>
+    </div>
+    <div class="card-grid">
+      <% site.offices.forEach(function (office) { %>
+      <article class="card">
+        <h3><%= office.city %></h3>
+        <p class="tag"><%= office.type %></p>
+        <p><%= office.address %></p>
+      </article>
+      <% }) %>
+    </div>
+  </div>
+</section>
+<%- include('../partials/footer') %>

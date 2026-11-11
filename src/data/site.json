@@ -1,0 +1,97 @@
+{
+  "company": {
+    "name": "Contoso",
+    "legalName": "Contoso Ltd.",
+    "tagline": "Trusted digital services, engineered for what comes next.",
+    "founded": 1998,
+    "hq": "Jakarta, Indonesia",
+    "email": "hello@contoso.com",
+    "address": "Contoso Tower, 18th floor, Jakarta 10220, Indonesia"
+  },
+  "nav": [
+    { "page": "index", "href": "index.html", "label": "Home" },
+    { "page": "about", "href": "about.html", "label": "About" },
+    { "page": "services", "href": "services.html", "label": "Services" },
+    { "page": "news", "href": "news.html", "label": "News" },
+    { "page": "contact", "href": "contact.html", "label": "Contact" }
+  ],
+  "hero": {
+    "title": "We build and run the digital services people rely on every day.",
+    "lead": "For more than 25 years Contoso has helped banks, public agencies and fast-growing businesses design, secure and operate technology that simply works."
+  },
+  "stats": [
+    { "value": "1998", "label": "Founded in Jakarta" },
+    { "value": "1,200+", "label": "Engineers and consultants" },
+    { "value": "9", "label": "Countries served" },
+    { "value": "99.95%", "label": "Managed platform uptime" }
+  ],
+  "services": [
+    {
+      "icon": "cloud",
+      "name": "Cloud & Platform Engineering",
+      "summary": "Landing zones, internal developer platforms and modernisation of the workloads that run your business.",
+      "capabilities": ["Cloud migration and modernisation", "Kubernetes and container platforms", "Infrastructure as code", "FinOps and cost governance"]
+    },
+    {
+      "icon": "data",
+      "name": "Data & AI",
+      "summary": "From governed data platforms to AI agents in production, with responsible AI built into every release.",
+      "capabilities": ["Data platforms and analytics", "AI agents and copilots", "MLOps and model monitoring", "Responsible AI reviews"]
+    },
+    {
+      "icon": "shield",
+      "name": "Cybersecurity",
+      "summary": "Security built in, not bolted on: secure software supply chains, identity and round-the-clock monitoring.",
+      "capabilities": ["DevSecOps and secure SDLC", "Identity and zero trust", "24/7 security operations", "Compliance readiness"]
+    },
+    {
+      "icon": "app",
+      "name": "Digital Products",
+      "summary": "Customer-facing web and mobile products, designed with real users and shipped continuously.",
+      "capabilities": ["Product discovery and UX", "Web and mobile engineering", "API platforms", "Accessibility by default"]
+    },
+    {
+      "icon": "ops",
+      "name": "Managed Services",
+      "summary": "We run what we build, and what you already have, with clear service levels and transparent reporting.",
+      "capabilities": ["Site reliability engineering", "Service desk", "Patch and vulnerability management", "Continuous cost optimisation"]
+    }
+  ],
+  "industries": ["Financial services", "Public sector", "Retail & consumer", "Manufacturing & energy", "Healthcare", "Education"],
+  "mission": "Help organisations deliver digital services that are secure, reliable and a pleasure to use.",
+  "vision": "A region where every citizen and customer can trust the digital services they depend on.",
+  "values": [
+    { "name": "Integrity first", "text": "We say what we will do, do what we say, and are open about risks." },
+    { "name": "Customers at the centre", "text": "Every decision starts with the people who use the services we build." },
+    { "name": "Craft and curiosity", "text": "We keep learning, automate the toil and take pride in quality work." },
+    { "name": "Sustainable by design", "text": "Efficient architectures, lower emissions and long-term partnerships." }
+  ],
+  "milestones": [
+    { "year": "1998", "text": "Founded in Jakarta as a three-person software studio." },
+    { "year": "2006", "text": "Opened the Singapore office and signed the first regional banking client." },
+    { "year": "2014", "text": "Launched 24/7 managed services and a security operations centre." },
+    { "year": "2019", "text": "Became a cloud-native consultancy with 500 engineers." },
+    { "year": "2023", "text": "Started the Data & AI practice." },
+    { "year": "2026", "text": "Adopted an agent-native engineering system across every delivery team." }
+  ],
+  "leaders": [
+    { "name": "Ayu Pratama", "role": "Chief Executive Officer", "initials": "AP" },
+    { "name": "Daniel Wijaya", "role": "Chief Technology Officer", "initials": "DW" },
+    { "name": "Maria Santoso", "role": "Chief Financial Officer", "initials": "MS" },
+    { "name": "Raka Nugroho", "role": "Chief Information Security Officer", "initials": "RN" },
+    { "name": "Lina Hartono", "role": "Chief People Officer", "initials": "LH" },
+    { "name": "Michael Tan", "role": "Managing Director, Singapore", "initials": "MT" }
+  ],
+  "offices": [
+    { "city": "Jakarta", "type": "Headquarters", "address": "Contoso Tower, 18th floor, Jakarta 10220" },
+    { "city": "Surabaya", "type": "Delivery centre", "address": "Contoso Hub, Surabaya 60271" },
+    { "city": "Singapore", "type": "Regional office", "address": "1 Contoso Quay, Singapore 049315" }
+  ],
+  "engagement": [
+    { "name": "Discover", "text": "Workshops with your teams to agree outcomes, risks and a realistic plan." },
+    { "name": "Design", "text": "Architecture, security and user experience designed together, then validated." },
+    { "name": "Deliver", "text": "Small, frequent releases with automated testing and security checks." },
+    { "name": "Run", "text": "Reliable operations, clear service levels and continuous improvement." }
+  ],
+  "topics": ["New project", "Managed services", "Partnership", "Media enquiry", "Something else"]
+}

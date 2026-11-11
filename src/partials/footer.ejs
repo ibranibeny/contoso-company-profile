@@ -1,0 +1,38 @@
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="brand brand-light" href="index.html">
+        <img src="assets/img/logo.svg" alt="" width="32" height="32">
+        <span><%= site.company.name %></span>
+      </a>
+      <p><%= site.company.tagline %></p>
+      <p><%= site.company.address %></p>
+    </div>
+    <div>
+      <h2>Company</h2>
+      <ul>
+        <% site.nav.forEach(function (item) { %>
+        <li><a href="<%= item.href %>"><%= item.label %></a></li>
+        <% }) %>
+      </ul>
+    </div>
+    <div>
+      <h2>Get in touch</h2>
+      <ul>
+        <li><a href="mailto:<%= site.company.email %>"><%= site.company.email %></a></li>
+        <li><a href="contact.html">Contact form</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-note">
+    <span>&copy; <span id="year"><%= buildDate.slice(0, 4) %></span> <%= site.company.legalName %> Contoso is a fictional company used for GitHub workshops.</span>
+    <span>Built <%= buildDate %> with GitHub Actions</span>
+  </div>
+</footer>
+<script src="assets/js/site.js" defer></script>
+<% (locals.scripts || []).forEach(function (src) { %>
+<script src="<%= src %>" defer></script>
+<% }) %>
+</body>
+</html>

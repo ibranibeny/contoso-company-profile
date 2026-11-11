@@ -1,0 +1,89 @@
+<%- include('../partials/head', { title: 'Home', description: site.company.tagline }) %>
+<%- include('../partials/header') %>
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">Since <%= site.company.founded %> &middot; <%= site.company.hq %></p>
+      <h1><%= site.hero.title %></h1>
+      <p class="lead"><%= site.hero.lead %></p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="services.html">Explore our services</a>
+        <a class="btn btn-ghost" href="contact.html">Talk to us</a>
+      </div>
+    </div>
+    <img class="hero-art" src="assets/img/hero.svg" alt="Illustration of connected cloud, data and security services" width="520" height="420">
+  </div>
+</section>
+
+<section class="stats" aria-label="Contoso in numbers">
+  <div class="container stats-grid">
+    <% site.stats.forEach(function (stat) { %>
+    <div class="stat"><strong><%= stat.value %></strong><span><%= stat.label %></span></div>
+    <% }) %>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">What we do</p>
+      <h2>Services across the whole lifecycle</h2>
+      <p>From the first workshop to 24/7 operations, one team owns the outcome with you.</p>
+    </div>
+    <div class="card-grid">
+      <% site.services.forEach(function (svc) { %>
+      <article class="card">
+        <span class="card-icon"><%- include('../partials/icon', { name: svc.icon }) %></span>
+        <h3><%= svc.name %></h3>
+        <p><%= svc.summary %></p>
+      </article>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container split">
+    <div class="section-head">
+      <p class="eyebrow">Who we work with</p>
+      <h2>Industries we know well</h2>
+      <p>Regulated industries trust us with services their customers use every day.</p>
+    </div>
+    <ul class="chips">
+      <% site.industries.forEach(function (name) { %>
+      <li><%= name %></li>
+      <% }) %>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Newsroom</p>
+      <h2>Latest from Contoso</h2>
+    </div>
+    <div class="card-grid">
+      <% news.slice(0, 3).forEach(function (item) { %>
+      <article class="card">
+        <span class="tag"><%= item.tag %></span>
+        <h3><%= item.title %></h3>
+        <p><%= item.summary %></p>
+        <p class="meta"><time datetime="<%= item.date %>"><%= item.date %></time></p>
+      </article>
+      <% }) %>
+    </div>
+    <p class="more"><a href="news.html">All news &rarr;</a></p>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <div>
+      <h2>Planning your next digital service?</h2>
+      <p>Tell us what you are building. A Contoso specialist will reply within two business days.</p>
+    </div>
+    <a class="btn btn-dark" href="contact.html">Contact us</a>
+  </div>
+</section>
+<%- include('../partials/footer') %>
