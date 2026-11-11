@@ -1,16 +1,11 @@
 <%- include('../partials/head', { title: 'Contact', description: 'Contact ' + site.company.legalName }) %>
 <%- include('../partials/header') %>
-<section class="page-hero">
-  <div class="container">
-    <p class="eyebrow">Contact</p>
-    <h1>Let's talk about what you are building</h1>
-    <p>Send us a note and a specialist will reply within two business days.</p>
-  </div>
-</section>
+<%- include('../partials/page-hero', { eyebrow: 'Contact', heading: 'Let\'s talk about your IT', lead: 'Tell us what you need. A solution architect replies within two business days; service-desk clients get help 24/7.' }) %>
 
 <section class="section">
-  <div class="container split">
+  <div class="container contact-grid">
     <form id="contact-form" class="card form-grid" novalidate>
+      <h2 class="full form-title">Send us a message</h2>
       <div class="field">
         <label for="name">Full name</label>
         <input id="name" name="name" autocomplete="name" required>
@@ -38,22 +33,41 @@
       </div>
       <label class="checkbox full"><input type="checkbox" name="consent" required> I agree that Contoso may contact me about this request.</label>
       <div class="full">
-        <button class="btn btn-dark" type="submit">Send message</button>
+        <button class="btn btn-primary" type="submit">Send message</button>
         <p id="form-status" class="form-status" role="status"></p>
       </div>
     </form>
-    <div>
-      <div class="section-head">
-        <p class="eyebrow">Offices</p>
-        <h2>Visit us</h2>
-      </div>
-      <% site.offices.forEach(function (office) { %>
-      <article class="card office">
-        <h3><%= office.city %> <span class="tag"><%= office.type %></span></h3>
-        <p><%= office.address %></p>
+
+    <div class="contact-side">
+      <% site.contacts.forEach(function (c) { %>
+      <article class="card contact-card">
+        <span class="icon-badge"><%- include('../partials/icon', { name: 'mail' }) %></span>
+        <div>
+          <h3><%= c.title %></h3>
+          <p><%= c.text %></p>
+          <a href="mailto:<%= c.email %>"><%= c.email %></a>
+        </div>
       </article>
       <% }) %>
-      <p>Email: <a href="mailto:<%= site.company.email %>"><%= site.company.email %></a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container split split-media">
+    <figure class="media-frame">
+      <img src="<%= site.hero.image %>" alt="<%= site.hero.imageAlt %>" width="1536" height="864" loading="lazy">
+      <figcaption>Contoso Tower, Jakarta</figcaption>
+    </figure>
+    <div>
+      <p class="eyebrow">Visit us</p>
+      <h2 class="h2">Offices</h2>
+      <% site.offices.forEach(function (office) { %>
+      <div class="office-line">
+        <span class="icon-badge"><%- include('../partials/icon', { name: 'pin' }) %></span>
+        <div><strong><%= office.city %></strong> &middot; <%= office.type %><br><span class="muted"><%= office.address %></span></div>
+      </div>
+      <% }) %>
     </div>
   </div>
 </section>

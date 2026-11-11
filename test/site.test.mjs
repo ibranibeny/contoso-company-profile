@@ -13,7 +13,7 @@ before(async () => {
 });
 
 test('builds the core company profile pages', () => {
-  for (const p of ['index.html', 'about.html', 'services.html', 'news.html', 'contact.html']) {
+  for (const p of ['index.html', 'solutions.html', 'about.html', 'news.html', 'contact.html']) {
     assert.ok(pages.includes(p), `${p} should be built`);
   }
 });
